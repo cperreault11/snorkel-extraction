@@ -71,7 +71,7 @@ class LSTM(RNNBase):
 #         output = ht[-1] if self.num_directions == 1 else torch.cat((ht[0], ht[1]), dim=1)
 
 #         return self.output_layer(self.dropout_layer(output[inv_perm_idx, :]))
-        return self.small_features(self.output_layer(self.dropout_layer(self.inner(X,hidden_state))))
+        return self.small_features(nn.ReLU(self.output_layer(self.dropout_layer(self.inner(X,hidden_state)))))
 
     def feature_outputs(self, X, batch_size):
         n = len(X)
