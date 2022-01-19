@@ -28,4 +28,3 @@ dependencies:
   - pip:
     - git+https://github.com/HazyResearch/numbskull@master
     - git+https://github.com/HazyResearch/treedlib@master
-    - git+https://github.com/liamdp12/scikit-learn.git
